@@ -17,7 +17,6 @@ sudo apt install -y \
     copyq \
     dnsutils \
     ddcutil \
-    docker-ce \
     feh \
     firmware-misc-nonfree \
     flake8 \
@@ -73,15 +72,6 @@ sudo apt install -y \
 
 # third parties
 
-# isync
-# google-chrome
-
-# git-delta
-GIT_DELTA_VERSION=0.1.1
-GIT_DELTA_DEB=~/Downloads/git-delta_${GIT_DELTA_VERSION}_amd64.deb
-curl -s -C - -Lo $GIT_DELTA_DEB https://github.com/dandavison/delta/releases/download/$GIT_DELTA_VERSION/$GIT_DELTA_DEB
-sudo apt install $GIT_DELTA_DEB
-
 # bat - cat with wings
 BAT_VERSION=0.15.4
 BAT_DEB=~/Downloads/bat_${GIT_DELTA_VERSION}_amd64.deb
@@ -92,7 +82,3 @@ sudo apt install $BAT_DEB
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt install brave-browser
-
-# nodejs
-curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
-sudo apt install nodejs
